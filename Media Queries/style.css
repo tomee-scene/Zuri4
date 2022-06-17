@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("bg-intro-mobile.png");
+  background-color: hsl(0, 100%, 74%);
+  background-blend-mode: multiply;
+  color: rgb(250, 240, 240);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ----START OF TEXT SECTION STYLING---- */
+
+.text_section {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.text_section h1 {
+  font-size: 1.75rem;
+  line-height: 2.3rem;
+  margin: 1.85rem 0 1rem;
+  padding: 1rem;
+}
+
+.text_section p {
+  font-size: 1rem;
+}
+
+/* ----END OF TEXT SECTION STYLING---- */
+/* ----START OF FORM SECTION STYLING---- */
+
+/* Start of Trial Box Styling */
+.trial_box {
+  background-color: hsl(248, 32%, 49%);
+  border-radius: 7.5px;
+  box-shadow: 0 10px 2px -2px rgba(0, 0, 0, 0.247);
+  display: flex;
+  height: 5rem;
+  margin-top: 1.85rem;
+  width: 100%;
+}
+
+.trial_box h2 {
+  font-size: 1rem;
+  margin: auto;
+  width: 65%;
+}
+
+.trial_box strong {
+  font-weight: 600;
+}
+/* End of Trial Box Styling */
+
+/* Start of General Form Styling */
+.registration_form {
+  background-color: rgb(250, 240, 240);
+  border-radius: 7.5px;
+  box-shadow: 0 10px 2px -2px rgba(0, 0, 0, 0.247);
+  margin: 1.35rem 0 2rem;
+  padding: 22.5px;
+}
+
+.registration_form input,
+.registration_form button {
+  background-color: rgb(250, 240, 240);
+  border: 1px solid hsl(246, 25%, 77%);
+  border-radius: 3.5px;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+  padding: 0 15px;
+  width: 100%;
+}
+
+::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.registration_form input:hover {
+  border: 1px solid hsl(248, 32%, 49%);
+  cursor: pointer;
+}
+
+.registration_form input:focus-visible {
+  border: 2px solid hsl(248, 32%, 49%);
+}
+
+.registration_form button {
+  background-color: hsl(154, 59%, 51%);
+  border: 0px;
+  color: rgb(250, 240, 240);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.registration_form button:hover {
+  cursor: pointer;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.registration_form p {
+  color: hsl(246, 25%, 77%);
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0 1rem;
+}
+
+.registration_form a {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+  text-decoration: none;
+}
+/* End of General Form Styling */
+
+/* Start of Form Validation Styling */
+.input_field {
+  position: relative;
+}
+
+input:required:invalid {
+  outline: none;
+  border: none;
+  border: 1px solid hsl(0, 100%, 74%);
+  background-image: url(icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin: content-box;
+}
+
+input:invalid + small {
+  display: inline;
+  color: hsl(0, 100%, 74%);
+  float: right;
+  font-size: 14px;
+}
+
+input:invalid {
+  outline: none;
+  border: none;
+  border: 1px solid hsl(154, 59% 31%);
+}
+
+small {
+  display: none;
+}
+
+/* End of Form Validation Styling */
+
+/* ----END OF FORM SECTION STYLING---- */
+/* ----START OF RESPONSIVE STYLING---- */
+
+@media screen and (min-width: 720px) {
+  body {
+    background-image: url(bg-intro-desktop.png);
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  .text_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0 3.5rem 0 7.5rem;
+    width: 50%;
+    text-align: left;
+  }
+
+  .text_section h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 2.95rem;
+    padding: 0rem;
+  }
+
+  .text_section p {
+    font-size: 0.9rem;
+  }
+
+  .form_section {
+    max-width: 560px;
+    width: 35rem;
+  }
+
+  .trial_box {
+    display: flex;
+    height: 3.35rem;
+    margin-top: 1.85rem;
+    width: 100%;
+  }
+
+  .trial_box p {
+    font-size: 1rem;
+    margin: auto;
+    width: 65%;
+  }
+
+  .trial_box strong {
+    font-weight: 600;
+  }
+}
+
+/* ----END OF RESPONSIVE STYLING---- */
